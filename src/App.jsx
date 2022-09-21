@@ -1,14 +1,17 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-//? Importamos el Component Escena para poder renderizarlo en App()
+//? Importar Component Escena para poder renderizarlo en App()
 import { Escena } from './components/escena/Escena';
+
+// Importar [array] de textos que será el 'props' a enviar a <Escena />
+import { textos } from './assets/textos';
 
 function App() {
     return (
-        // Usaremos el tag <> vacío, aunque se podría usar <Fragment></Fragment>
+        // Usaremos el tag <></> vacío, aunque se podría usar <Fragment></Fragment>
         <>
-            <Escena />
+            <Escena param={textos} />
         </>
     );
 }
