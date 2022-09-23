@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Importar componentes de estilos
-import { Button, Card, Card2, BtnContent } from '../StyledComponents';
+import { Button, Card, BtnContent } from '../StyledComponents';
 
 // Lo exportamos con nombre explícito (mismo que el archivo), no por default
 // Al contener un único <tag> o elemento, no hace falta envolverlo en un contenedor padre
@@ -32,19 +32,13 @@ export const Escena = ({ param }) => {
     // Recorrer array (param) y crear un nuevo <p></p> por cada elemento
     //! Poner una 'key' a cada elemento para evitar error en Consola
     const frases = param.map((frase, index) => {
-        if (counter === index) {
-            return (
-                <>
-                    <Card2 className="current" key={index}>
-                        {frase}
-                    </Card2>
-                </>
-            );
-        }
+        let currentText;
+
+        counter === index ? (currentText = true) : (currentText = false);
 
         return (
             <>
-                <Card className="card" key={index}>
+                <Card value={currentText} className="card" key={index}>
                     {frase}
                 </Card>
             </>
