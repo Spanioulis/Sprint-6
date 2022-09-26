@@ -9,8 +9,13 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    background-color: aliceblue;
-    padding-top: 1rem;
+    background-color: #4C6793;
+    background-image: url(${({ url }) => url});
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    ${'' /* min-height: 100vh; */}
+    padding-top: 1.5rem;
 
     @media (max-width: 968px) {
     font-size: 0.8rem;
@@ -31,9 +36,9 @@ export const Card = styled.p`
     align-items: center;
     background-color: ${({ value }) => {
         if (value === true) {
-            return '#ecc5fb';
+            return 'rgb(936, 125, 251)';
         } else {
-            return 'aliceblue';
+            return 'rgb(240, 248, 255, 0.6)';
         }
     }};
     border-radius: 25px;

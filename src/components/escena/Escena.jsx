@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 
 // Importar componentes de estilos
-import { Button, Card, BtnContent } from '../StyledComponents';
+import { Button, Card, BtnContent, GlobalStyle } from '../StyledComponents';
 
 // Lo exportamos con nombre explícito (mismo que el archivo), no por default
 // Al contener un único <tag> o elemento, no hace falta envolverlo en un contenedor padre
@@ -20,13 +21,15 @@ const useCounter = () => {
 };
 
 export const Escena = ({ param }) => {
+    // Obtener imágenes (de forma dinámica)
+    const images = require.context('../../assets/img/');
     const { counter, increase, decrease } = useCounter();
 
     // Condiciales para que no sea menor de 0 ni mayor de 3 el 'counter'
     if (counter < 0) {
-        increase();
+        return increase();
     } else if (counter > 3) {
-        decrease();
+        return decrease();
     }
 
     // Recorrer array (param) y crear un nuevo <p></p> por cada elemento
@@ -40,8 +43,10 @@ export const Escena = ({ param }) => {
 
         return (
             <>
+                {/* <GlobalStyle value={images(`./${index + 1}.jpg`)} param={index}/> */}
+                <GlobalStyle url={images(`./${counter + 1}.jpg`)} />
                 <Card value={currentText} className="card" key={index}>
-                    {frase}
+                    {frase.txt}
                 </Card>
             </>
         );
