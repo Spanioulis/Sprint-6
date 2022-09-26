@@ -34,7 +34,9 @@ export const Escena = ({ param }) => {
     const frases = param.map((frase, index) => {
         let currentText;
 
-        counter === index ? (currentText = true) : (currentText = false);
+        // Mejorar código con &&
+        // counter === index ? (currentText = true) : (currentText = false);
+        counter === index && (currentText = true);
 
         return (
             <>

@@ -18,6 +18,15 @@ body {
 }
 `;
 
+export const Welcome = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-around;
+    padding-top: 1rem;
+`;
+
 export const Card = styled.p`
     align-items: center;
     background-color: ${({ value }) => {
@@ -30,7 +39,8 @@ export const Card = styled.p`
     border-radius: 25px;
     border: 1px black solid;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
     height: 50px;
     justify-content: center;
     margin: 1rem;
@@ -46,8 +56,8 @@ export const Button = styled.button`
     background-color: #d0c9c0;
     border-radius: 5px;
     border: 1px black solid;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
     height: 50px;
     margin: 0.2rem;
     padding: 0 1rem 0 1rem;
