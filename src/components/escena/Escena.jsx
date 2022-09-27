@@ -42,13 +42,14 @@ export const Escena = ({ param }) => {
         counter === index && (currentText = true);
 
         return (
-            <>
+            <div key={index}>
                 {/* <GlobalStyle value={images(`./${index + 1}.jpg`)} param={index}/> */}
                 <GlobalStyle url={images(`./${counter + 1}.jpg`)} />
-                <Card value={currentText} className="card" key={index}>
+
+                <Card value={currentText} className="card">
                     {frase.txt}
                 </Card>
-            </>
+            </div>
         );
     });
 

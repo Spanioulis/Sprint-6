@@ -6,6 +6,13 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin:0;
     padding: 0;
+
+        @media (max-width: 992px) {
+    font-size: 0.9rem;
+    }
+        @media (max-width: 768px) {
+    font-size: 0.8rem;
+    }
 }
 
 body {
@@ -14,13 +21,13 @@ body {
     background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
-    ${'' /* min-height: 100vh; */}
     padding-top: 1.5rem;
+}
 
-    @media (max-width: 968px) {
-    font-size: 0.8rem;
+h2 {
+    font-size: 1.5rem;
 }
-}
+
 `;
 
 export const Welcome = styled.div`
@@ -55,6 +62,11 @@ export const Card = styled.p`
 export const BtnContent = styled.div`
     display: flex;
     justify-content: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Button = styled.button`
@@ -71,5 +83,9 @@ export const Button = styled.button`
     &:hover {
         background-color: #7d6e83;
         color: aliceblue;
+    }
+
+    @media (max-width: 768px) {
+        width: 250px;
     }
 `;
