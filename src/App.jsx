@@ -1,19 +1,15 @@
 import { useState } from 'react';
-
 // Importar componente Escena para poder renderizarlo en App()
 import { Escena } from './components/escena/Escena';
-
 // Importar [array] de textos que será el 'props' a enviar a <Escena />
 import { textos } from './assets/textos';
 import { BtnContent, Button, Welcome, GlobalStyle } from './components/StyledComponents';
 
-function App() {
-    const [click, setClick] = useState(false);
-
+function App () {
+    const [ click, setClick ] = useState(false);
     const handleClick = () => {
         setClick(true);
     };
-
     return (
         // Usaremos el tag <></> vacío, aunque se podría usar <Fragment></Fragment>
         <>
