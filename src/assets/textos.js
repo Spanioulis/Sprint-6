@@ -6,19 +6,23 @@
 export const textos = [
     {
         txt: "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
-        img: '../img/1.jpg'
+        img: '../img/1.jpg',
+        id: 1
     },
     {
         txt: "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
-        img: '../img/2.jpg'
+        img: '../img/2.jpg',
+        id: 2
     },
     {
         txt: "L'heroi va decidir travessar la porta que el portava a casa",
-        img: '../img/3.jpg'
+        img: '../img/3.jpg',
+        id: 3
     },
     {
         txt: 'Mentrestant, altres herois no van tenir tanta sort en la seva elecció ...',
-        img: '../img/4.jpg'
+        img: '../img/4.jpg',
+        id: 4
     }
 ];
 // export const textos = [

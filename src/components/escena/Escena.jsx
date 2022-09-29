@@ -8,7 +8,7 @@ import { Button, Card, BtnContent, GlobalStyle } from '../StyledComponents';
 // Al contener un único <tag> o elemento, no hace falta envolverlo en un contenedor padre
 
 const useCounter = () => {
-    const [counter, setCounter] = useState(0);
+    const [ counter, setCounter ] = useState(0);
 
     const increase = () => setCounter(counter + 1);
     const decrease = () => setCounter(counter - 1);
@@ -33,7 +33,7 @@ export const Escena = ({ param }) => {
     }
 
     // Recorrer array (param) y crear un nuevo <p></p> por cada elemento
-    //! Poner una 'key' a cada elemento para evitar error en Consola
+    // Cambiar key={index} (mala praxis) por key={frase.id}
     const frases = param.map((frase, index) => {
         let currentText;
 
@@ -42,7 +42,7 @@ export const Escena = ({ param }) => {
         counter === index && (currentText = true);
 
         return (
-            <div key={index}>
+            <div key={frase.id}>
                 {/* <GlobalStyle value={images(`./${index + 1}.jpg`)} param={index}/> */}
                 <GlobalStyle url={images(`./${counter + 1}.jpg`)} />
 
